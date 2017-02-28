@@ -1,1 +1,8 @@
-Clients Index
+<h1>Welcome <%= @employee.name %>  </h1>
+
+is this the right page?
+<div class="card">
+  <% @clients.each do |client| %>
+    <p> <%= client.name %> </p>
+  <% end %>
+</div>

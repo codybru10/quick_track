@@ -1,0 +1,25 @@
+<%= render 'layouts/errors', :object => @client %>
+
+<%= form_for [@employee,@client] do |f| %>
+  <div class="card">
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+
+   <%= f.label :address %>
+   <%= f.text_field :address %>
+
+   <%= f.label :contact_name %>
+   <%= f.text_field :contact_name %>
+
+   <%= f.label :contact_email%>
+   <%= f.text_field :contact_email %>
+
+   <%= f.label :contact_number%>
+   <%= f.text_field :contact_number %>
+
+   <%= f.label :rate%>
+   <%= f.text_field :rate %>
+
+   <%= f.submit class: "btn link-btn" %>
+  </div>
+ <% end %>
