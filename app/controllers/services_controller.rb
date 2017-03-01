@@ -26,6 +26,21 @@ class ServicesController < ApplicationController
     end
   end
 
+  def edit
+    @client = Client.find(params[:client_id])
+    @service = Service.find(params[:id])
+  end
+
+  def update
+    @client = Client.find(params[:client_id])
+    @service = Service.find(params[:id])
+    if @service.update(service_params)
+      redirect_to client_path(@client)
+    else
+      render :edit
+    end
+  end
+
   private
   def service_params
     params.require(:service).permit(:description, :date, :client_id, :employee_id)

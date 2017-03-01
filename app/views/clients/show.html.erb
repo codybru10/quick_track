@@ -4,4 +4,12 @@
   <h5><%= @client.address %></h5>
 </div>
 
+
+<div class="collection">
+  <h3 class="center">Services</h3>
+    <% @client.services.each do |service| %>
+      <h4 class="collection-item"> <%= service.description %> <%= link_to "Edit", edit_client_service_path(@client, service) %></h4>
+    <% end %>
+  </div>
+
 <%= link_to "Add Service", new_client_service_path(@client) %>
