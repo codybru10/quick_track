@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  before_action :authenticate_employee!
+
   def index
     @client = Client.find(params[:client_id])
     @services = @client.services.all

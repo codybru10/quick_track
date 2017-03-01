@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  before_action :authenticate_employee!
 
   def index
     @clients = Client.all
@@ -19,6 +20,12 @@ class ClientsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @client = Client.find(params[:id])
+    @client.destroy
+    redirect_to clients_path
   end
 
 
