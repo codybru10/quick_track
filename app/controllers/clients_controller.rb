@@ -1,25 +1,21 @@
 class ClientsController < ApplicationController
 
   def index
-    @employee = current_employee
     @clients = Client.all
   end
 
   def show
-    @employee = current_employee
     @client = Client.find(params[:id])
   end
 
   def new
-    @employee = Employee.find(params[:employee_id])
     @client = Client.new
   end
 
   def create
-    @employee = current_employee
-    @client = @employee.clients.new(client_params)
+    @client = Client.new(client_params)
     if @client.save
-      redirect_to employee_client_path(@employee, @client)
+      redirect_to client_path(@client)
     else
       render :new
     end

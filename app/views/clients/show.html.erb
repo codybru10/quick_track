@@ -3,3 +3,5 @@
   <h3><%= @client.name %></h3>
   <h5><%= @client.address %></h5>
 </div>
+
+<%= link_to "Add Service", new_client_service_path(@client) %>

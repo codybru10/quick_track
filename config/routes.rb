@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   root to: "clients#index"
 
   resources :employees do
-    resources :clients
+    resources :services
+  end
+
+  resources :clients do
+    resources :services
   end
 end
