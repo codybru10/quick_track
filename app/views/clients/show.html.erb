@@ -1,4 +1,3 @@
-<h1>Client Show</h1>
 <div class="card">
   <h3><%= @client.name %></h3>
   <h5><%= @client.address %></h5>
@@ -7,8 +6,8 @@
 
 <div class="collection">
   <h3 class="center">Services</h3>
-    <% @client.services.each do |service| %>
-      <h4 class="collection-item"> <%= service.description %> <%= link_to "Edit", edit_client_service_path(@client, service) %></h4>
+    <% @client.services.order(:date).each do |service| %>
+      <h4 class="collection-item"> <%= service.date %> <%= link_to service.description, client_service_path(@client) %> </h4>
     <% end %>
   </div>
 
