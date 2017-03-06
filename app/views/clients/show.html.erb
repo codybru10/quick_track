@@ -7,7 +7,7 @@
 <div class="collection">
   <h3 class="center">Services</h3>
     <% @client.services.order(:date).each do |service| %>
-      <h4 class="collection-item"> <%= service.date %> <%= link_to service.description, client_service_path(@client) %> </h4>
+      <h4 class="collection-item"> <%= service.date %> <%= link_to service.description, client_service_path(@client, service) %> </h4>
     <% end %>
   </div>
 
