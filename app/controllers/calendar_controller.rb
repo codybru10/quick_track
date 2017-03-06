@@ -43,4 +43,19 @@ class CalendarController < ApplicationController
     @calendar_list = service.list_calendar_lists
   end
 
+  def events
+    client = Signet::OAuth2::Client.new({
+      client_id: Rails.application.secrets.google_client_id,
+      client_secret: Rails.application.secrets.google_client_secret,
+      token_credential_uri: 'https://accounts.google.com/o/oauth2/token'
+    })
+
+    client.update!(session[:authorization])
+
+    service = Google::Apis::CalendarV3::CalendarService.new
+    service.authorization = client
+
+    @event_list = service.list_events(params[:calendar_id])
+  end
+
 end
