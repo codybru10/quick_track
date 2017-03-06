@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root to: "clients#index"
 
+  get '/redirect', to: 'calendar#redirect', as: 'redirect'
+  get '/callback', to: 'calendar#callback', as: 'callback'
+
+
   resources :employees do
     resources :services
   end

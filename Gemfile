@@ -11,7 +11,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'materialize-sass'
-gem "omniauth-google-oauth2"
+gem 'google-api-client', '~> 0.9', require: 'google/apis/calendar_v3'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
