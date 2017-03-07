@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'materialize-sass'
 gem 'google-api-client', '~> 0.9', require: 'google/apis/calendar_v3'
+gem "simple_calendar", "~> 2.0"
 
 
 group :development, :test do

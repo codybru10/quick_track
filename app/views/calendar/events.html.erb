@@ -1,6 +1,11 @@
+<%= form_tag new_event_url do %>
+  <%= submit_tag 'Add event' %>
+<% end %>
+
 <ul>
   <% @event_list.items.each do |event| %>
     <li><%= event.summary %></li>
     <li><%= event.start.date_time %></li>
+    <li><%= event.end.date_time %></li>
   <% end %>
 </ul>

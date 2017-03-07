@@ -4,3 +4,7 @@
     <%= link_to "Events", events_path(calendar.id) %>
   <% end %>
 </ul>
+
+<%= month_calendar do |date| %>
+  <%= date %>
+<% end %>
