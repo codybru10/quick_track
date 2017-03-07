@@ -7,6 +7,8 @@
   <p><strong>Balance:</strong> $<%= @service.cost %></p>
   <p><strong>Paid:</strong> <%= @service.paid %></p>
 
+  <%= render('pay') %>
+
   <p><%= link_to "Edit", edit_client_service_path(@client,@service) %> | <%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %></p>
   <%= link_to "All Services", client_path(@client) %>
 </div>

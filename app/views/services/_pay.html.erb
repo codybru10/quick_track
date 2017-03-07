@@ -1,0 +1,9 @@
+<%= render 'layouts/errors', :object => @service %>
+
+<%= form_for [@client, @service] do |f| %>
+
+   <%= f.hidden_field :paid, :value => true %>
+
+   <%= f.submit "Paid", class: "btn link-btn" %>
+
+ <% end %>

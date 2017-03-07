@@ -14,9 +14,12 @@ class Client < ActiveRecord::Base
     rate = self.rate
     time = 0
     self.services.each do |service|
-      time = time + service.time
+      if !service.paid?
+        time = time + service.time
+      end
     end
     bill = (time.to_f/60.to_f) * rate
     return bill.to_i
   end
+
 end
