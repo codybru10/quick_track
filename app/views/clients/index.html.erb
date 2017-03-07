@@ -1,4 +1,4 @@
-<div class="collection">
+<div class="collection white">
   <% @clients.each do |client| %>
     <h5 class=collection-item> <%= link_to client.name, client_path(client) %>    <%= link_to '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'.html_safe, client_path(client), class: "right", method: :delete, data: {confirm: "Delete?"} %></h5>
   <% end %>

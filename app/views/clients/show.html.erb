@@ -4,7 +4,15 @@
   <h5><%= @client.address %></h5>
 </div>
 
+<div class="card">
+  <h1><time>00:00:00</time></h1>
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <button id="clear">clear</button>
+</div>
+
 <div class="collection white">
+  <span class="right"><%= link_to "Add Service", new_client_service_path(@client) %></span>
   <h3 class="center">Services</h3>
   <% @client.services.order(:date).each do |service| %>
     <% if !service.paid? %>
@@ -19,5 +27,3 @@
       <% end %>
     <% end %>
   </div>
-
-<%= link_to "Add Service", new_client_service_path(@client) %>
