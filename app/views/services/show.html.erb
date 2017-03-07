@@ -3,7 +3,8 @@
 
   <p><%= @service.date %></p>
   <p><%= @service.description %></p>
-  <p><%= @service.time %> mins</p>
+  <p><%= @service.time %> minutes</p>
+  <p>$<%= @service.cost %></p>
 
   <p><%= link_to "Edit", edit_client_service_path(@client,@service) %> | <%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %></p>
   <%= link_to "All Services", client_path(@client) %>
