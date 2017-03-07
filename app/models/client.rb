@@ -16,6 +16,6 @@ class Client < ActiveRecord::Base
     self.services.each do |service|
       time = time + service.time
     end
-    return bill = time * rate
+    return bill = (time/60) * rate
   end
 end
