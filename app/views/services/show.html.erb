@@ -1,10 +1,11 @@
 <h1>Service</h1>
 <div class="card">
 
-  <p><%= @service.date %></p>
-  <p><%= @service.description %></p>
-  <p><%= @service.time %> minutes</p>
-  <p>$<%= @service.cost %></p>
+  <p><strong>Date:</strong> <%= @service.date.strftime('%D') %></p>
+  <p><strong>Description:</strong> <%= @service.description %></p>
+  <p><strong>Time:</strong> <%= @service.time %> minutes</p>
+  <p><strong>Balance:</strong> $<%= @service.cost %></p>
+  <p><strong>Paid:</strong> <%= @service.paid %></p>
 
   <p><%= link_to "Edit", edit_client_service_path(@client,@service) %> | <%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %></p>
   <%= link_to "All Services", client_path(@client) %>
