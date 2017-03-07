@@ -1,11 +1,10 @@
 <h1>Service</h1>
+<div class="card">
 
-<p><%= @service.date %></p>
-<p><%= @service.description %></p>
-<p><%= @service.time %></p>
+  <p><%= @service.date %></p>
+  <p><%= @service.description %></p>
+  <p><%= @service.time %> mins</p>
 
-<%= link_to "Edit", edit_client_service_path(@client,@service) %>
-<br>
-<%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %>
-<br>
-<%= link_to "View All Services", client_path(@client) %>
+  <p><%= link_to "Edit", edit_client_service_path(@client,@service) %> | <%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %></p>
+  <%= link_to "All Services", client_path(@client) %>
+</div>
