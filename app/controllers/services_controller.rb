@@ -41,6 +41,13 @@ class ServicesController < ApplicationController
     end
   end
 
+  def destroy
+    @client = Client.find(params[:client_id])
+    @service = Service.find(params[:id])
+    @service.destroy
+    redirect_to client_path(@client)
+  end
+
   private
   def service_params
     params.require(:service).permit(:description, :date, :time, :client_id, :employee_id)

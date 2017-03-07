@@ -6,4 +6,6 @@
 
 <%= link_to "Edit", edit_client_service_path(@client,@service) %>
 <br>
+<%= link_to "Delete", client_service_path(@client,@service), method: :delete, data: {confirm: 'Delete Service?'} %>
+<br>
 <%= link_to "View All Services", client_path(@client) %>
