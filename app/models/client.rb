@@ -10,4 +10,12 @@ class Client < ActiveRecord::Base
     return time
   end
 
+  def bill
+    rate = self.rate
+    time = 0
+    self.services.each do |service|
+      time = time + service.time
+    end
+    return bill = time * rate
+  end
 end

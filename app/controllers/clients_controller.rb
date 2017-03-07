@@ -8,6 +8,7 @@ class ClientsController < ApplicationController
   def show
     @client = Client.find(params[:id])
     @total = @client.total
+    @billable = @client.bill
   end
 
   def new
