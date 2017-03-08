@@ -50,7 +50,7 @@ start.onclick = timer;
 
 /* Stop button */
 stop.onclick = function() {
-    total = totalseconds
+    total = Math.round(totalseconds/60)
     $('#service_time').val(total);
     clearTimeout(t);
 }
