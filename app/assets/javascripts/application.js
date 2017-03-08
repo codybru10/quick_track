@@ -16,7 +16,7 @@
 //= require materialize-sprockets
 //= require_tree .
 window.onload = function(){
-var h1 = document.getElementsByTagName('h1')[0],
+var h2 = document.getElementsByTagName('h2')[0],
     start = document.getElementById('start'),
     stop = document.getElementById('stop'),
     clear = document.getElementById('clear'),
@@ -35,7 +35,7 @@ function add() {
         }
     }
 
-    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
     timer();
 }
@@ -57,8 +57,8 @@ stop.onclick = function() {
 
 /* Clear button */
 clear.onclick = function() {
-    h1.textContent = "00:00:00";
+    h2.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;
 
-}
+  }
 };

@@ -2,6 +2,8 @@
   <h3><%= @client.name %></h3>
   <h5 class="right">Balance Due: $<%= @billable %> </h5>
   <h5><%= @client.address %></h5>
+  <div id="client-detail"></div>
+  <%= link_to "...", client_path(@client), id: 'detail-button', remote: true %>
 </div>
 
 
