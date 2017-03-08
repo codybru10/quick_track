@@ -9,7 +9,8 @@
 
 
 <div class="collection white">
-  <span class="right"><%= link_to "Add Service", new_client_service_path(@client) %></span>
+  <span class="right"><%= link_to "Add Service", new_client_service_path(@client) %></span><br>
+  <span class="right"><%= link_to "Create Invoice", client_invoices_path(@client) %></span>
   <h3 class="center">Services</h3>
   <% @client.services.order(:date).each do |service| %>
     <% if !service.paid? %>

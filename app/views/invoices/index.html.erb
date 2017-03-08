@@ -1,0 +1,18 @@
+<div class="card" id="invoice">
+
+  <h1>Invoice</h1>
+  <h4> <%= @client.name %> </h4>
+
+
+  <% @client.services.each do |service| %>
+    <% if !service.paid? %>
+      <li> <%= service.date.strftime('%D') %> <%= service.description %> <%= service.cost %> </li>
+    <% end %>
+  <% end %>
+
+
+  <h5>Balance Due: $<%= @client.bill %>.00 </h5>
+
+</div>
+
+<%= link_to "Back to Client", client_path(@client) %>
