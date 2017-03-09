@@ -1,24 +1,42 @@
-# README
+# QuickTrack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _My Personal Profile_
 
-Things you may want to cover:
+#### By _**Cody Brubaker**_
 
-* Ruby version
 
-* System dependencies
+## Setup/Installation Requirements
 
-* Configuration
+_Run in your web browser. To run QuickTrack, in command line run:_
 
-* Database creation
+```
+$ git clone https://github.com/codybru10/quick_track
+$ cd quick_track
+$ bundle install
+$ rake db:setup
+$ rails server
+Go to localhost:3000 in your browser to view.
+Go to localhost:3000/admin to view admin dashboard (change employee :admin to true in irb)
 
-* Database initialization
+OR
 
-* How to run the test suite
+Visit: https://protected-caverns-97027.herokuapp.com/
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+_Contact me Github at codybru10 or cody.brubaker@gmail.com_
 
-* Deployment instructions
+## Technologies Used
 
-* ...
+* _Ruby_
+* _Rails_
+* _Javascript_
+* _Materialize_
+* _Postgres_
+* _Heroku_
+
+
+### License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2016 **Cody Brubaker**
