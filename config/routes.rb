@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :employees, :controllers => {registrations: 'registrations'}
 
   root to: "clients#index"
