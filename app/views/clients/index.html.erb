@@ -1,5 +1,10 @@
-<div class="collection white">
-  <% @clients.each do |client| %>
-    <h5 class=collection-item> <%= link_to client.name, client_path(client) %>    <%= link_to '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'.html_safe, client_path(client), class: "right", method: :delete, data: {confirm: "Delete?"} %></h5>
-  <% end %>
-</div>
+<% if !@clients.empty? %>
+  <div class="collection white">
+    <% @clients.each do |client| %>
+      <h5 class=collection-item> <%= link_to client.name, client_path(client) %>    <%= link_to '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'.html_safe, client_path(client), class: "right", method: :delete, data: {confirm: "Delete?"} %></h5>
+    <% end %>
+  </div>
+<% else %>
+  <h4>Click below to start adding clients!</h4>
+  <%= link_to "Add Client", new_client_path() %>
+<% end %>

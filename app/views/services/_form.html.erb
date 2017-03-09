@@ -11,17 +11,17 @@
    <%= f.label :date %>
    <%= f.date_field :date %>
 
-   <%= f.label :time %>
+   <%= f.label "Time (in minutes)" %>
    <%= f.number_field :time %>
 
 
-   <%= f.submit class: "btn link-btn" %>
+   <%= f.submit class: "btn link-btn black" %>
   </div>
  <% end %>
 
 <div class="card">
   <h2><time>00:00:00</time></h2>
-  <button id="start">start</button>
-  <button id="stop">stop</button>
-  <button id="clear">clear</button>
+  <button class="btn black" id="start">start</button>
+  <button class="btn black" id="stop">stop</button>
+  <button class="btn black" id="clear">clear</button>
 </div>

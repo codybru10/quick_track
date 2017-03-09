@@ -2,6 +2,8 @@ class Client < ActiveRecord::Base
   has_many :services
   has_many :employees, :through => :services
 
+  validates :name, :address, :contact_name, :contact_email, :contact_number, :rate, :presence => true
+
   def total
     time = 0
     self.services.each do |service|

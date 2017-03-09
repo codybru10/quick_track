@@ -2,6 +2,9 @@ class Service < ActiveRecord::Base
   belongs_to :client
   belongs_to :employee
 
+  validates :description, :date, :time, :client_id, :employee_id, :presence => true
+
+
   def cost
     rate = self.client.rate
     time = self.time.to_f

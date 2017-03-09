@@ -6,6 +6,7 @@
   <p><strong>Time:</strong> <%= @service.time %> minutes</p>
   <p><strong>Balance:</strong> $<%= @service.cost %></p>
   <p><strong>Paid:</strong> <%= @service.paid %></p>
+  <p><strong>Employee:</strong> <%= @service.employee.name %></p>
 
   <%= render('pay') %>
 

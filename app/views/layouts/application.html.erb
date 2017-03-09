@@ -15,10 +15,10 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
 
           <% if employee_signed_in? %>
-            <strong><%= current_employee.name %></strong>
-            <li><%= link_to "Logout", destroy_employee_session_path, method: :delete, :class => 'navbar-link'  %></li>
             <li><%= link_to "Clients", clients_path, :class => 'navbar-link'  %></li>
             <li><%= link_to "Add Client", new_client_path, :class => 'navbar-link'  %></li>
+            <strong><li><%= current_employee.name %></li></strong>
+            <li><%= link_to "Logout", destroy_employee_session_path, method: :delete, :class => 'navbar-link'  %></li>
           <% else %>
              <li><%= link_to "Sign up", new_employee_registration_path, :class => 'navbar-link'  %></li>
              <li><%= link_to "Login", new_employee_session_path, :class => 'navbar-link' %></li>

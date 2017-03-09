@@ -18,10 +18,11 @@
     <% end %>
   <% end %>
 </div>
+
+<% @client.services.order(:date).each do |service| %>
+  <% if service.paid? %>
   <div class="collection white">
-    <% @client.services.order(:date).each do |service| %>
-      <% if service.paid? %>
-        <h5 class="collection-item"> <%= service.date.strftime('%D') %> <%= link_to service.description, client_service_path(@client, service) %><span class='right'>Paid</span></h5>
-      <% end %>
-    <% end %>
+    <h5 class="collection-item"> <%= service.date.strftime('%D') %> <%= link_to service.description, client_service_path(@client, service) %><span class='right'>Paid</span></h5>
   </div>
+  <% end %>
+<% end %>
