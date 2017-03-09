@@ -23,15 +23,31 @@ html {
 }
 
 input[type=text]:focus:not([readonly]){
-border-bottom: 1px solid black;
-box-shadow: 0 1px 0 0 black;
-color: black;
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 0 0 black;
+  color: black;
 }
 
 input[type=text]:focus:not([readonly]) + label {
   color: black;
 }
 
-label {
+input[type=date]:focus:not([readonly]){
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 0 0 black;
+  color: black;
+}
+
+input[type=date]:focus:not([readonly]) + label {
+  color: black;
+}
+
+input[type=number]:focus:not([readonly]){
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 0 0 black;
+  color: black;
+}
+
+input[type=number]:focus:not([readonly]) + label {
   color: black;
 }
