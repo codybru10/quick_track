@@ -14,6 +14,7 @@ gem 'materialize-sass'
 gem 'google-api-client', '~> 0.9', require: 'google/apis/calendar_v3'
 gem "simple_calendar", "~> 2.0"
 gem 'rails_admin', '~> 1.1.1'
+gem 'cancancan'
 
 
 group :development, :test do
