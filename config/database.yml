@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: quick_track_production
+  adapter: postgresql
+  database: db/production.sqlite3
   username: quick_track
   password: <%= ENV['QUICK_TRACK_DATABASE_PASSWORD'] %>
